@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="body">
+	<div class="main bg3">
+		<h1 class="target">LEVEL: 3</h1>
+		<h1 class="target">TIME LEFT: <span class="time"></span>s</h1>
+		<div class="items-box">
+			<img src="chain.png" class="items chainsaw1" style="left: 575px; top: 730px; width: 50px; opacity: 50%">
+			<img src="chain.png" class="items chainsaw2" style="left: 1050px; top: 320px; width: 30px; transform: scale(-1, 1) rotate(5deg); opacity: 80%">
+			<img src="sg.png" class="items shotguns1" style="left: 1520px; top: 550px; width: 70px; transform: rotate(15deg);  opacity: 80%">
+			<img src="sg.png" class="items shotguns2" style="left: 845px; top: 50px; width: 120px; transform: rotate(-90deg); opacity: 80%">
+			<img src="super.png" class="items super1" style="left: 1115px; top: 425px; width: 85px; transform: rotate(90deg) ">
+			<img src="super.png" class="items super2" style="left: 1045px; top: 415px; width: 60px;">
+			<img src="lmg.png" class="items lmg1" style="left: 1520px; top: 12px; width: 60px; opacity: 70%; transform: rotate(-12deg);">
+			<img src="lmg.png" class="items lmg2" style="left: 720px; top: 220px; width: 60px; transform: rotate(5deg); opacity: 80%">
+		</div>
+		<div>
+			<div class="count-box1">
+				<h1 class="count"><span class="countChainsaws"></span></h1>
+				<h1 class="count-name">CHAINSAWS</h1>
+			</div>
+			<div class="count-box2">
+				<h1 class="count"><span class="countShotguns"></span></h1>
+				<h1 class="count-name">SHOTGUNS</h1>
+			</div>
+			<img src="doomguy.gif" class="doomguy">
+			<div class="count-box3">
+				<h1 class="count"><span class="countSuper"></span></h1>
+				<h1 class="count-name">SUPER SHOTGUNS</h1>
+			</div>
+			<div class="count-box4">
+				<h1 class="count"><span class="countlmg"></span></h1>
+				<h1 class="count-name">MACHINEGUNS</h1>
+			</div>
+		</div>
+	</div>
+	<div class="win">
+		<h1 class=" count-name" style="font-size: 40px;">THE END</h1>
+	</div>
+	<div class="lose">
+		<h1 class=" count-name" style="font-size: 40px;">TIME IS OUT</h1>
+		<a href="index3.html" style="text-decoration: none"><div class="next"><h1>RETRY</h1></div></a>
+	</div>
+	<button class="skip">IDDQD</button>
+	<button class="skiplose">F</button>
+	<script type="text/javascript">
+		let win = 8;
+		let countChainsaws = 2;
+		let time = 120
+		document.querySelector('.time').innerHTML = time
+		document.querySelector('.countChainsaws').innerHTML = countChainsaws;
+		document.querySelector('.chainsaw1').onclick = function(){
+			countChainsaws = countChainsaws - 1;
+			document.querySelector('.countChainsaws').innerHTML = countChainsaws;
+			document.querySelector('.chainsaw1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+		document.querySelector('.chainsaw2').onclick = function(){
+			countChainsaws = countChainsaws - 1;
+			document.querySelector('.countChainsaws').innerHTML = countChainsaws;
+			document.querySelector('.chainsaw2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+
+		let countShotguns = 2;
+		document.querySelector('.countShotguns').innerHTML = countShotguns;
+		document.querySelector('.shotguns1').onclick = function(){
+			countShotguns = countShotguns - 1;
+			document.querySelector('.countShotguns').innerHTML = countShotguns;
+			document.querySelector('.shotguns1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+		document.querySelector('.shotguns2').onclick = function(){
+			countShotguns = countShotguns - 1;
+			document.querySelector('.countShotguns').innerHTML = countShotguns;
+			document.querySelector('.shotguns2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.wing').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+
+		let countSuper = 2;
+		document.querySelector('.countSuper').innerHTML = countSuper;
+		document.querySelector('.super1').onclick = function(){
+			countSuper = countSuper - 1;
+			document.querySelector('.countSuper').innerHTML = countSuper;
+			document.querySelector('.super1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+		document.querySelector('.super2').onclick = function(){
+			countSuper = countSuper - 1;
+			document.querySelector('.countSuper').innerHTML = countSuper;
+			document.querySelector('.super2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+			}
+		}
+
+		let countlmg = 2;
+		document.querySelector('.countlmg').innerHTML = countlmg;
+		document.querySelector('.lmg1').onclick = function(){
+			countlmg = countlmg - 1;
+			document.querySelector('.countlmg').innerHTML = countlmg;
+			document.querySelector('.lmg1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+			}
+		}
+		document.querySelector('.lmg2').onclick = function(){
+			countlmg = countlmg - 1;
+			document.querySelector('.countlmg').innerHTML = countlmg;
+			document.querySelector('.lmg2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.win').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+			}
+		}
+		document.querySelector('.skip').onclick = function(){
+			document.querySelector('.win').style.display = 'table';
+			document.querySelector('.doomguy').src = 'goom.png'
+			document.querySelector('.chainsaw1').style.display = 'none';
+			document.querySelector('.chainsaw2').style.display = 'none';
+			document.querySelector('.shotguns1').style.display = 'none';
+			document.querySelector('.shotguns2').style.display = 'none';
+			document.querySelector('.super1').style.display = 'none';
+			document.querySelector('.super2').style.display = 'none';
+			document.querySelector('.lmg1').style.display = 'none';
+			document.querySelector('.lmg2').style.display = 'none';
+		}
+		document.querySelector('.skiplose').onclick = function(){
+			document.querySelector('.lose').style.display = 'table';
+			document.querySelector('.doomguy').src = 'dead.jpg'
+			document.querySelector('.chainsaw1').style.display = 'none';
+			document.querySelector('.chainsaw2').style.display = 'none';
+			document.querySelector('.shotguns1').style.display = 'none';
+			document.querySelector('.shotguns2').style.display = 'none';
+			document.querySelector('.super1').style.display = 'none';
+			document.querySelector('.super2').style.display = 'none';
+			document.querySelector('.lmg1').style.display = 'none';
+			document.querySelector('.lmg2').style.display = 'none';
+		}
+		function timer(){
+			time = time - 1
+			document.querySelector('.time').innerHTML = time
+		}
+		setInterval(timer, 1000)
+		function lose(){
+			document.querySelector('.lose').style.display = 'table';
+			document.querySelector('.doomguy').src = 'dead.jpg'
+			document.querySelector('.chainsaw1').style.display = 'none';
+			document.querySelector('.chainsaw2').style.display = 'none';
+			document.querySelector('.shotguns1').style.display = 'none';
+			document.querySelector('.shotguns2').style.display = 'none';
+			document.querySelector('.super1').style.display = 'none';
+			document.querySelector('.super2').style.display = 'none';
+			document.querySelector('.lmg1').style.display = 'none';
+			document.querySelector('.lmg2').style.display = 'none';
+		}
+		setTimeout(lose, 120000)
+	</script>
+</body>
+</html>

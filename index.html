@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="body">
+	<div class="main bg1">
+		<h1 class="target">LEVEL: 1 <span class="targetname"></span> </h1>
+		<div class="items-box">
+			<img src="chain.png" class="items chainsaw1" style="left: 300px; top: 410px">
+			<img src="chain.png" class="items chainsaw2" style="left: 1070px; top: 410px; width: 70px; transform: scale(-1, 1);">
+			<img src="sg.png" class="items shotguns1" style="left: 830px; top: 570px;">
+			<img src="sg.png" class="items shotguns2" style="left: 450px; top: 140px;">
+			<img src="super.png" class="items super1" style="left: 1470px; top: 420px;">
+			<img src="super.png" class="items super2" style="left: 1170px; top: 80px; transform: rotate(-30deg);">
+			<img src="lmg.png" class="items lmg1" style="left: 830px; top: 390px; width: 50px;">
+			<img src="lmg.png" class="items lmg2" style="left: 50px; top: 570px; width: 160px;">
+		</div>
+		<div>
+			<div class="count-box1">
+				<h1 class="count"><span class="countChainsaws"></span></h1>
+				<h1 class="count-name">CHAINSAWS</h1>
+			</div>
+			<div class="count-box2">
+				<h1 class="count"><span class="countShotguns"></span></h1>
+				<h1 class="count-name">SHOTGUNS</h1>
+			</div>
+			<img src="doomguy.gif" class="doomguy">
+			<div class="count-box3">
+				<h1 class="count"><span class="countSuper"></span></h1>
+				<h1 class="count-name">SUPER SHOTGUNS</h1>
+			</div>
+			<div class="count-box4">
+				<h1 class="count"><span class="countlmg"></span></h1>
+				<h1 class="count-name">MACHINEGUNS</h1>
+			</div>
+		</div>
+	</div>
+	<div class="winning">
+		<h1 class=" count-name" style="font-size: 40px;">THE W</h1>
+		<a href="index2.html" style="text-decoration: none"><div class="next"><h1>NEXT LEVEL</h1></div></a>
+	</div>
+	<button class="skip">IDDQD</button>
+	<script type="text/javascript">
+		let win = 8;
+		let countChainsaws = 2;
+		document.querySelector('.countChainsaws').innerHTML = countChainsaws;
+		document.querySelector('.chainsaw1').onclick = function(){
+			countChainsaws = countChainsaws - 1;
+			document.querySelector('.countChainsaws').innerHTML = countChainsaws;
+			document.querySelector('.chainsaw1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+		document.querySelector('.chainsaw2').onclick = function(){
+			countChainsaws = countChainsaws - 1;
+			document.querySelector('.countChainsaws').innerHTML = countChainsaws;
+			document.querySelector('.chainsaw2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+
+		let countShotguns = 2;
+		document.querySelector('.countShotguns').innerHTML = countShotguns;
+		document.querySelector('.shotguns1').onclick = function(){
+			countShotguns = countShotguns - 1;
+			document.querySelector('.countShotguns').innerHTML = countShotguns;
+			document.querySelector('.shotguns1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+		document.querySelector('.shotguns2').onclick = function(){
+			countShotguns = countShotguns - 1;
+			document.querySelector('.countShotguns').innerHTML = countShotguns;
+			document.querySelector('.shotguns2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+
+		let countSuper = 2;
+		document.querySelector('.countSuper').innerHTML = countSuper;
+		document.querySelector('.super1').onclick = function(){
+			countSuper = countSuper - 1;
+			document.querySelector('.countSuper').innerHTML = countSuper;
+			document.querySelector('.super1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+		}
+		}
+		document.querySelector('.super2').onclick = function(){
+			countSuper = countSuper - 1;
+			document.querySelector('.countSuper').innerHTML = countSuper;
+			document.querySelector('.super2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+			}
+		}
+
+		let countlmg = 2;
+		document.querySelector('.countlmg').innerHTML = countlmg;
+		document.querySelector('.lmg1').onclick = function(){
+			countlmg = countlmg - 1;
+			document.querySelector('.countlmg').innerHTML = countlmg;
+			document.querySelector('.lmg1').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+			}
+		}
+		document.querySelector('.lmg2').onclick = function(){
+			countlmg = countlmg - 1;
+			document.querySelector('.countlmg').innerHTML = countlmg;
+			document.querySelector('.lmg2').style.display = 'none';
+			win = win - 1;
+			if (win == 0) {
+				document.querySelector('.winning').style.display = 'table';
+				
+				document.querySelector('.doomguy').src = 'goom.png'
+			}
+		}
+		document.querySelector('.skip').onclick = function(){
+			document.querySelector('.winning').style.display = 'table';
+			document.querySelector('.doomguy').src = 'goom.png'
+			document.querySelector('.chainsaw1').style.display = 'none';
+			document.querySelector('.chainsaw2').style.display = 'none';
+			document.querySelector('.shotguns1').style.display = 'none';
+			document.querySelector('.shotguns2').style.display = 'none';
+			document.querySelector('.super1').style.display = 'none';
+			document.querySelector('.super2').style.display = 'none';
+			document.querySelector('.lmg1').style.display = 'none';
+			document.querySelector('.lmg2').style.display = 'none';
+		}
+	</script>
+</body>
+</html>
